@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import { injectable, inject } from 'inversify'
 import { User } from '../../domain/entities/user'
 import { ApplicationError } from '../../domain/errors/application'

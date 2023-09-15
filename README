@@ -13,8 +13,8 @@ MongoDB (preferencialmente hospedado em um serviço como MongoDB Atlas)
 
 ## Configuração
 Clone o repositório:
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+git clone https://github.com/diegopedroso15/focusTextil.git
+cd focusTextil
 
 ## Instale as dependências:
 npm install
