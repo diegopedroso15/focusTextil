@@ -1,0 +1,63 @@
+# Focus Textil API
+
+Projeto de API RESTful de Cadastro e Autenticação de Clientes
+
+## Descrição
+Este é um projeto de API RESTful que permite o cadastro de clientes e a autenticação de usuários. A aplicação utiliza Node.js com Express, TypeScript, MongoDB como banco de dados, TSOA para geração de Swagger e Inversify para injeção de dependência. A arquitetura é baseada nos princípios SOLID e DDD (Domain-Driven Design).
+
+## Pré-requisitos
+Antes de começar, certifique-se de ter o seguinte instalado em sua máquina:
+
+Node.js (versão X.X.X)
+MongoDB (preferencialmente hospedado em um serviço como MongoDB Atlas)
+
+## Configuração
+Clone o repositório:
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
+
+## Instale as dependências:
+npm install
+
+## Configure as variáveis de ambiente:
+Crie um arquivo .env na raiz do projeto e configure as seguintes variáveis
+DB_URL = 'mongodb+srv://FocusTextil:123123123@cluster0.yddpiat.mongodb.net/'
+DB_NAME = 'db_focus'
+PRIVATE_KEY = 'some_private_key'
+PORT = '3031'
+
+## Execute a aplicação:
+npm start
+A aplicação estará disponível em http://localhost:3000.
+
+## Uso
+A documentação da API pode ser acessada em http://localhost:3031/docs/ após a inicialização do servidor. Você pode usar esta documentação para testar os endpoints e entender como usá-los.
+
+## Cadastro de Clientes
+Para cadastrar um cliente, faça uma solicitação POST para /mp/auth/sign-up com os dados do cliente no corpo da solicitação. A aplicação verificará se o e-mail já está cadastrado e retornará um token de acesso se o cadastro for bem-sucedido.
+
+## Exemplo de requisição:
+POST /mp/auth/sign-up
+Content-Type: application/json
+
+{
+  "nome": "Nome do Cliente",
+  "email": "cliente@email.com",
+  "senha": "senha123"
+}
+
+## Autenticação de Usuários
+Para autenticar um usuário, faça uma solicitação POST para /api/autenticacao com o e-mail e a senha no corpo da solicitação. A aplicação retornará um token de acesso se a autenticação for bem-sucedida.
+
+## Exemplo de requisição:
+POST /mp/auth/sign-in
+Content-Type: application/json
+
+{
+  "email": "cliente@email.com",
+  "senha": "senha123"
+}
+
+## Testes
+A aplicação inclui testes unitários para controladores e serviços. Para executar os testes, use o seguinte comando:
+npm test
